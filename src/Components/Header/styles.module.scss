@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+.Header {
+  &__Logo {
+    display: flex;
+  }
+
+  &__LogoImg {
+    width: 60px;
+
+    & > img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__LogoText {
+    @include font-xxl;
+
+    color: $main-color;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__Wrap {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding-top: 46px;
+    position: relative;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &__MenuDesktop {
+    display: block;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__MenuMobile {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
