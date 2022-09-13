@@ -23,13 +23,13 @@ export const Header = ({ links, activeItem }: Props) => {
             <img src={logo} alt="logo" />
           </div>
           <h1 className={styles.Header__LogoText}>LOGO</h1>
+          <div className={styles.Header__MenuMobile}>
+            <MobileMenu links={links} activeItem={activeItem} />
+          </div>
         </div>
         <div className={styles.Header__Menu}>
           <div className={styles.Header__MenuDesktop}>
             <DesktopMenu links={links} activeItem={activeItem} />
-          </div>
-          <div className={styles.Header__MenuMobile}>
-            <MobileMenu links={links} activeItem={activeItem} />
           </div>
         </div>
       </div>

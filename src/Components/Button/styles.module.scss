@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.Button {
+  @include font-l;
+
+  background-color: $main-color;
+  color: $white-color;
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 63px;
+  text-align: center;
+  text-transform: uppercase;
+}

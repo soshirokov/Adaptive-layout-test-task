@@ -1,5 +1,7 @@
 import React from 'react'
+import { Footer } from './Components/Footer'
 import { Header, Link } from './Components/Header'
+import { Home } from './Routes/Home'
 
 const links: Link[] = [
   { id: 1, name: 'TEXT', link: '#' },
@@ -9,8 +11,10 @@ const links: Link[] = [
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header links={links} activeItem={1} />
+      <Home />
+      <Footer />
     </div>
   )
 }

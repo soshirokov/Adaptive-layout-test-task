@@ -1,0 +1,133 @@
+@import "../../variables.scss";
+
+.Item {
+  background-color: $light-grey;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+
+  @include tab {
+    margin-bottom: 30px;
+    padding: 75px 50px 50px;
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    padding: 50px;
+    width: 570px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__Header {
+    align-items: center;
+    display: flex;
+  }
+
+  &__Icon {
+    align-items: center;
+    background-color: $light-main-color;
+    border-radius: 50px;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    padding: 5px;
+    width: 50px;
+
+    & > img {
+      height: auto;
+      width: 100%;
+    }
+
+    @include tab {
+      border-radius: 200px;
+      height: 200px;
+      padding: 30px;
+      position: absolute;
+      right: 60px;
+      top: 90px;
+      width: 200px;
+    }
+
+    @include desktop {
+      border-radius: 100px;
+      height: 100px;
+      left: 0;
+      padding: 13px;
+      position: relative;
+      top: 0;
+      width: 100px;
+    }
+  }
+
+  &__Title {
+    @include font-xl;
+
+    margin-left: 20px;
+
+    @include tab {
+      margin-left: 0;
+    }
+
+    @include desktop {
+      margin-left: 60px;
+    }
+  }
+
+  &__Desc {
+    @include font-m;
+
+    border-bottom: 1px solid $sublight-grey;
+    font-family: "Arial", sans-serif;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 14px;
+    word-wrap: break-word;
+
+    @include tab {
+      border-bottom: none;
+      margin-top: 25px;
+      max-width: 355px;
+      padding: 0;
+    }
+
+    @include desktop {
+      margin-top: 40px;
+      max-width: 400px;
+    }
+  }
+
+  &__Link {
+    @include font-item-link;
+
+    align-items: center;
+    color: inherit;
+    display: flex;
+    margin-top: 15px;
+    text-decoration: none;
+
+    @include tab {
+      margin-top: 50px;
+    }
+
+    @include desktop {
+      margin-top: 25px;
+    }
+  }
+
+  &__LinkIcon {
+    margin-left: 15px;
+
+    @include tab {
+      margin-left: 25px;
+    }
+
+    @include desktop {
+      margin-left: 30px;
+    }
+  }
+}

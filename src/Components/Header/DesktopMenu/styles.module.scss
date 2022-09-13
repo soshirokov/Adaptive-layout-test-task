@@ -7,22 +7,34 @@
     list-style-type: none;
     padding: 0;
     width: 450px;
+
+    @include tab {
+      width: 440px;
+    }
   }
 
   &__MenuLink {
-    @include font-l;
+    @include font-menu;
 
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include desktop {
+      color: $white-color;
+    }
   }
 
   &__MenuItem {
-    padding: 0 16px 8px;
+    padding: 0 15px 8px;
 
     &_active {
       border-bottom: 2px solid;
-      border-color: inherit;
+      border-color: $main-color;
+
+      @include desktop {
+        border-color: $white-color;
+      }
     }
   }
 }

@@ -1,0 +1,62 @@
+@import "../../variables.scss";
+
+.Banner {
+  background: linear-gradient(0deg, transparent 37%, $main-color 0%);
+  display: flex;
+  min-height: 480px;
+
+  @include tab {
+    background: transparent;
+    min-height: 880px;
+  }
+
+  @include desktop {
+    background: linear-gradient(90deg, transparent 50%, $main-color 50%);
+    min-height: 695px;
+  }
+
+  &__Wrap {
+    background-image: url("./banner_img.png");
+    background-position-x: 50%;
+    background-position-y: calc(100% - 71px);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    margin: 0 auto;
+    max-width: 1220px;
+    min-height: 100%;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+
+
+    @include tab {
+      background-position-x: 75%;
+      background-position-y: 107%;
+      background-size: auto;
+    }
+
+    @include desktop {
+      background-position-x: 65%;
+      background-position-y: 105%;
+    }
+  }
+
+  &__CallToAction {
+    height: calc(100% - 40px);
+    margin-top: 40px;
+    width: 100%;
+
+    @include tab {
+      height: auto;
+      left: 80px;
+      margin-top: 0;
+      position: absolute;
+      top: 180px;
+      width: auto;
+    }
+
+    @include desktop {
+      top: 223px;
+    }
+  }
+}

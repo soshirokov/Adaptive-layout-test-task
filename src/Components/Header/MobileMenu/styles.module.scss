@@ -2,18 +2,22 @@
 
 .MobileMenu {
   &__Menu {
+    background-color: $white-color;
     border-top: 1px solid $light-grey;
     left: 0;
     list-style-type: none;
+    margin: 0;
     padding: 0;
     position: absolute;
     top: 100%;
     width: 100%;
+    z-index: 999;
   }
 
   &__MenuLink {
     color: inherit;
     font-size: 20px;
+    font-weight: 500;
     line-height: 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -27,5 +31,11 @@
     &_active {
       color: $main-color;
     }
+  }
+
+  &__Icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 24px;
   }
 }
