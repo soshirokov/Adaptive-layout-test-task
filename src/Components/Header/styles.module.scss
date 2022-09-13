@@ -1,0 +1,86 @@
+@import "../../variables.scss";
+
+.Header {
+  width: 100%;
+  z-index: 999;
+
+  @include tab {
+    position: absolute;
+  }
+
+  &__Logo {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tab {
+      justify-content: flex-start;
+    }
+  }
+
+  &__LogoImg {
+    width: 40px;
+
+    @include tab {
+      width: 50px;
+    }
+
+    @include desktop {
+      width: 60px;
+    }
+
+    & > img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__LogoText {
+    @include font-xxl-logo;
+
+    color: $main-color;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+
+    @include tab {
+      bottom: 4px;
+    }
+  }
+
+  &__Wrap {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 13px 20px 13px 15px;
+    position: relative;
+
+    @include tab {
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 37px 40px 0;
+    }
+
+    @include desktop {
+      padding: 46px 20px 0;
+    }
+  }
+
+  &__MenuDesktop {
+    display: none;
+
+    @include tab {
+      display: block;
+    }
+  }
+
+  &__MenuMobile {
+    display: block;
+
+    @include tab {
+      display: none;
+    }
+  }
+}

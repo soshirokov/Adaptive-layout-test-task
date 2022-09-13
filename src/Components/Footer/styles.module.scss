@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.Footer {
+  background-color: $light-grey;
+  margin-top: 40px;
+  padding: 10px 0;
+  text-align: center;
+
+  @include tab {
+    margin-top: 45px;
+    padding: 50px 0;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin-top: 100px;
+  }
+
+  &__Wrap {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 20px;
+
+    @include tab {
+      padding: 0 30px;
+    }
+  }
+
+  &__LogoText {
+    @include font-xxl-logo;
+  }
+}

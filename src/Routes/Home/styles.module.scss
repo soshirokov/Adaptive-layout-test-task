@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+.Home {
+  position: relative;
+  z-index: 3;
+
+  &__Wrap {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 20px;
+
+    @include tab {
+      padding: 0 30px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__Items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @include tab {
+      margin-top: 70px;
+    }
+  }
+
+  &__SubHeader {
+    @include font-xxl;
+
+    margin-left: 20px;
+    margin-top: 30px;
+
+    @include tab {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    @include desktop {
+      margin-top: 70px;
+    }
+  }
+
+  &__Features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include tab {
+      gap: 35px 155px;
+      justify-content: flex-start;
+      margin-top: 35px;
+      max-width: $tab;
+    }
+
+    @include desktop {
+      gap: 95px;
+      max-width: 100%;
+    }
+  }
+}
